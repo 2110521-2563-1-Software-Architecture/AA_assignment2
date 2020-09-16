@@ -48,7 +48,6 @@ async function runner_small_list() {
 	  }
 	  console.log("Synchronous Iterations:", things[i], "max:", max(timers), "ms min:", min(timers), "ms avg:", average(timers))
   }
-  //console.log(timers)
 }
 
 async function runner_big_list() {
@@ -65,8 +64,7 @@ async function runner_big_list() {
 	  }
 	  console.log("Synchronous Iterations:", things[i], "max:", max(timers), "ms min:", min(timers), "ms avg:", average(timers))
   }
-  //console.log(timers)
 }
 // add the following section
-//runner_small_list()
-runner_big_list();
+runner_small_list()
+//runner_big_list();
