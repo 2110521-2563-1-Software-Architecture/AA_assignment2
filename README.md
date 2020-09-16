@@ -21,6 +21,8 @@
 * The x-axis is the number of clients that list books. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่าการ list ของ multiple client ถ้าใช้ REST จะเร็วกว่า gPRC
 
 ### c. 	Vary the number of concurrent calls from 1 to 4096 calls.
+![GitHub Logo](/c_concurrent.png)
+*  The x-axis is the number of concurrent . The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่าการ concurrent ถ้าใช้ gRPC จะเร็วกว่า REST
 ## 2. Discussion of the results why one method is better the other in which scenarios. 
  From the results of the graphs, It's shown that gRPC has better performance in most scenarios because of the concurrent request in a different connection. HTTP/1.1 which is required by REST does not support The concurrent requests. The responses have to be sent back in the same order as the requests came in. One the other hand, The concurrent request in HTTP/2 that is required by gRPC supports request multiplexing.
 
