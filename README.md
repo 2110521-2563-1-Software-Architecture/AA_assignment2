@@ -10,7 +10,11 @@
 
 ## 1. Graphs showing the benchmarking results with the explanation of your experimental settings. 
 ### a. 	Single client with a small call to insert a book item, a bigger call to insert a list of multiple book items. 
-### b. 	Multiple clients with different kind of calls
+![GitHub Logo](/a_insert.png)
+### b. 	Multiple clients with different kind of calls.
+![GitHub Logo](/DELETE.png)
+![GitHub Logo](/GET.png)
+![GitHub Logo](/LIST.png)
 ### c. 	Vary the number of concurrent calls from 1 to 4096 calls.
 ## 2. Discussion of the results why one method is better the other in which scenarios. 
  From the results of the graphs, It's shown that gRPC has better performance in most scenarios because of the concurrent request in a different connection. HTTP/1.1 which is required by REST does not support The concurrent requests. The responses have to be sent back in the same order as the requests came in. One the other hand, The concurrent request in HTTP/2 that is required by gRPC supports request multiplexing.
