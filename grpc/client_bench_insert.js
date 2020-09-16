@@ -22,6 +22,12 @@ const insertBookPromise = (i) => new Promise(function(resolve, reject) {
 	});
 });
 
+const insertManyBook = async i => {
+  for (var l=0;l<10;l++) {
+    await insertBookPromise(l);
+  }
+}
+
 async function runner_list() {
   console.log("INSERT")
   const things = [1,2,4,8,16,32,64,128,256,512,1024,2048,4096];
@@ -38,6 +44,24 @@ async function runner_list() {
   }
   //console.log(timers)
 }
+//for running insert book list
+async function runner_multilist() {
+  console.log("INSERT")
+  const things = [1,2,4,8,16,32,64,128,256,512,1024,2048,4096];
+  for (var i=0;i<things.length;i++) {
+    for(var i2=0;i2<4096;i2++)
+        await deleteBookPromise(i2);
+  	var timers = []
+		for(var i2=0;i2<things[i];i2++) {
+      var starter = new Date().getTime()
+	    var books = await insertManyBook(i2);
+	    timers.push((new Date().getTime()) - starter);
+	  }
+	  console.log("Synchronous Iterations:", things[i], "max:", max(timers), "ms min:", min(timers), "ms avg:", average(timers))
+  }
+  //console.log(timers)
+}
 
 // add the following section
 runner_list();
+//runner_multilist();
