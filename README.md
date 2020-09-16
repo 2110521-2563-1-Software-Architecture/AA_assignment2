@@ -10,7 +10,7 @@
 
 ## 1. Graphs showing the benchmarking results with the explanation of your experimental settings. 
 ### a. 	Single client with a small call to insert a book item, a bigger call to insert a list of multiple book items. 
-![GitHub Logo](/a_insert.png)
+![GitHub Logo](/aa_insert.png)
 ### b. 	Multiple clients with different kind of calls.
 ![GitHub Logo](/DELETE.png)
 ![GitHub Logo](/GET.png)
