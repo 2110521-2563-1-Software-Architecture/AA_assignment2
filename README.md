@@ -11,14 +11,14 @@
 ## 1. Graphs showing the benchmarking results with the explanation of your experimental settings. 
 ### a. 	Single client with a small call to insert a book item, a bigger call to insert a list of multiple book items. 
 ![GitHub Logo](/aa_insert.png)
-The x-axis is the number of book items that are inserted. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่า insert ถ้าใช้  gRPC จะเร็วกว่า REST
+* The x-axis is the number of book items that are inserted. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่า insert ถ้าใช้  gRPC จะเร็วกว่า REST
 ### b. 	Multiple clients with different kind of calls.
 ![GitHub Logo](/DELETE.png)
-The x-axis is the number of clients that delete books. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่าการ delete ของ multiple client ถ้าใช้ gRPC จะเร็วกว่า REST
+* The x-axis is the number of clients that delete books. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่าการ delete ของ multiple client ถ้าใช้ gRPC จะเร็วกว่า REST
 ![GitHub Logo](/GET.png)
-The x-axis is the number of clients that get books. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่าการ get ของ multiple client ถ้าใช้ gRPC จะเร็วกว่า REST 
+* The x-axis is the number of clients that get books. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่าการ get ของ multiple client ถ้าใช้ gRPC จะเร็วกว่า REST 
 ![GitHub Logo](/LIST.png)
-The x-axis is the number of clients that list books. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่าการ list ของ multiple client ถ้าใช้ REST จะเร็วกว่า gPRC
+* The x-axis is the number of clients that list books. The y-axis is executable time(ms.). จากกราฟ เราจะเห็นว่าการ list ของ multiple client ถ้าใช้ REST จะเร็วกว่า gPRC
 
 ### c. 	Vary the number of concurrent calls from 1 to 4096 calls.
 ## 2. Discussion of the results why one method is better the other in which scenarios. 
